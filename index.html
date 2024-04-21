@@ -173,43 +173,111 @@
 </footer>
 </body>
 </html>
-<script>
-    // Highlight experience entries on hover
-    const experienceEntries = document.querySelectorAll('.job-entry');
-    experienceEntries.forEach(entry => {
-        entry.addEventListener('mouseenter', () => {
-            entry.style.backgroundColor = '#f0f8ff';
-            entry.style.transition = 'background-color 0.5s ease';
-        });
-        entry.addEventListener('mouseleave', () => {
-            entry.style.backgroundColor = 'transparent';
-        });
-    });
 
-    // Scroll to sections on clicking navigation links
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetSection = document.querySelector(link.getAttribute('href'));
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Miguel Omana's Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://media.licdn.com/dms/image/D4E16AQG65cUO1LJE4g/profile-displaybackgroundimage-shrink_350_1400/0/1694570649198?e=1719446400&v=beta&t=-_U7Ycn5IF8QlsEeKTSfsTIfeQvjgC7vRb_ufaqLMaI');
+            background-size: cover;
+            background-position: center;
+        }
+        .header-info {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #f8f9fa;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #ffffff; /* Changed color to white */
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding-left: 20px;
+            position: relative;
+        }
+        ul li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #007bff;
+        }
+        .experience-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .job-entry {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://media.licdn.com/dms/image/D4E03AQGiKt191gUabw/profile-displayphoto-shrink_400_400/0/1694816659086?e=1719446400&v=beta&t=TqrfYshISlrc5zX1gFCBFR7bK_V5KDf0Q_H05enubV0" alt="Jose Miguel Omana" class="profile-pic">
+        <div class="header-info">
+            <h1>Jose Miguel Omana</h1>
+            <p><strong>Master’s in Management Student - Georgetown University</strong></p>
+            <p>Phone: +1 305 337 6715</p>
+            <p>Email: jmo114@georgetown.edu</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jose-miguel-omana/">jose-miguel-omana</a></p>
+        </div>
+    </header>
+    <section class="section" style="background-color: #e6f7ff; transition: background-color 0.5s ease; text-align: center;">
+        <h2>Professional Summary</h2>
+        <p>Dynamic and accomplished young professional with a proven history in Customer Service, Human Resources, Sales, and Marketing. Thrives in fast-paced environments, excelling in navigating challenges and fostering improvement through adaptability and effective problem-solving.</p>
+    </section>
+    <script>
+        const summarySection = document.querySelector('.section');
+        summarySection.addEventListener('mouseenter', () => {
+            summarySection.style.backgroundColor = '#b3e0ff';
         });
-    });
-
-    // Add a button to toggle dark mode
-    const toggleDarkModeBtn = document.createElement('button');
-    toggleDarkModeBtn.textContent = 'Toggle Dark Mode';
-    toggleDarkModeBtn.style.margin = '10px';
-    document.body.insertBefore(toggleDarkModeBtn, document.body.firstChild);
-
-    toggleDarkModeBtn.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        const isDarkMode = document.body.classList.contains('dark-mode');
-        document.querySelectorAll('h1, h2, h3, p, li, a').forEach(element => {
-            element.style.color = isDarkMode ? '#ffffff' : '#000000';
+        summarySection.addEventListener('mouseleave', () => {
+            summarySection.style.backgroundColor = '#e6f7ff';
         });
-        document.querySelectorAll('.section').forEach(section => {
-            section.style.backgroundColor = isDarkMode ? '#333333' : '#e6f7ff';
-        });
-    });
-</script>
+    </script>
+</body>
+</html>
