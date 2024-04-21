@@ -1,4 +1,4 @@
-# Web2
+Jose Omana's Website
 
 References:
 - https://bootstrapmade.com/
