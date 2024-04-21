@@ -3,6 +3,9 @@
 <style>
     .nav-button {
         background-color: #007bff;
+<style>
+    .nav-button {
+        background-color: #007bff;
         color: #fff;
         border: none;
         padding: 10px 20px;
@@ -15,16 +18,17 @@
         background-color: #0056b3;
     }
 </style>
-<button class="nav-button" onclick="scrollToSection('professional-summary')">Professional Summary</button>
-<button class="nav-button" onclick="scrollToSection('experience')">Experience</button>
-<button class="nav-button" onclick="scrollToSection('education')">Education</button>
-<button class="nav-button" onclick="scrollToSection('skills')">Skills</button>
-<button class="nav-button" onclick="scrollToSection('contact')">Contact</button>
+<nav>
+    <button class="nav-button" onclick="scrollToSection('professional-summary')">Professional Summary</button>
+    <button class="nav-button" onclick="scrollToSection('experience')">Experience</button>
+    <button class="nav-button" onclick="scrollToSection('education')">Education</button>
+    <button class="nav-button" onclick="scrollToSection('skills')">Skills</button>
+    <button class="nav-button" onclick="scrollToSection('contact')">Contact</button>
 </nav>
 
 <script>
     function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
+        const section = document.querySelector('.' + sectionId);
         if (section) {
             section.scrollIntoView({behavior: 'smooth'});
         }
