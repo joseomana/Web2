@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <nav>
-    <button onclick="document.getElementById('professional-summary').scrollIntoView();">Professional Summary</button>
-    <button onclick="document.getElementById('experience').scrollIntoView();">Experience</button>
-    <button onclick="document.getElementById('education').scrollIntoView();">Education</button>
-    <button onclick="document.getElementById('skills').scrollIntoView();">Skills</button>
-    <button onclick="document.getElementById('contact').scrollIntoView();">Contact</button>
+<style>
+    .nav-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .nav-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<button class="nav-button" onclick="document.getElementById('professional-summary').scrollIntoView({behavior: 'smooth'});">Professional Summary</button>
+<button class="nav-button" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'});">Experience</button>
+<button class="nav-button" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'});">Education</button>
+<button class="nav-button" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'});">Skills</button>
+<button class="nav-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</button>
 </nav>
 <html lang="en">
 <head>
