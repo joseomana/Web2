@@ -15,12 +15,21 @@
         background-color: #0056b3;
     }
 </style>
-<button class="nav-button" onclick="document.getElementById('professional-summary').scrollIntoView({behavior: 'smooth'});">Professional Summary</button>
-<button class="nav-button" onclick="document.getElementById('experience').scrollIntoView({behavior: 'smooth'});">Experience</button>
-<button class="nav-button" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'});">Education</button>
-<button class="nav-button" onclick="document.getElementById('skills').scrollIntoView({behavior: 'smooth'});">Skills</button>
-<button class="nav-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'});">Contact</button>
+<button class="nav-button" onclick="scrollToSection('professional-summary')">Professional Summary</button>
+<button class="nav-button" onclick="scrollToSection('experience')">Experience</button>
+<button class="nav-button" onclick="scrollToSection('education')">Education</button>
+<button class="nav-button" onclick="scrollToSection('skills')">Skills</button>
+<button class="nav-button" onclick="scrollToSection('contact')">Contact</button>
 </nav>
+
+<script>
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({behavior: 'smooth'});
+        }
+    }
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
